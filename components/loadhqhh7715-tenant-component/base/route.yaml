@@ -1,0 +1,21 @@
+apiVersion: route.openshift.io/v1
+kind: Route
+metadata:
+  creationTimestamp: null
+  labels:
+    app.kubernetes.io/created-by: application-service
+    app.kubernetes.io/instance: loadhqhh7715-tenant-component
+    app.kubernetes.io/managed-by: kustomize
+    app.kubernetes.io/name: loadhqhh7715-tenant-component
+    app.kubernetes.io/part-of: loadhqhh7715-tenant-app
+  name: loadhqhh7715-tenant-component
+  namespace: loadhqhh7715-tenant
+spec:
+  path: /
+  port:
+    targetPort: 8081
+  to:
+    kind: Service
+    name: loadhqhh7715-tenant-component
+    weight: null
+status: {}
